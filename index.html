@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Make Weird Stuff in Unity Tutorial</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="An in depth hands on way of making cool looking stuff in Unity super quickly with no programming">
+    <meta property="og:title" content="How to make cool stuff in Unity for beginners" /> 
+    <meta property="og:site_name" content="Make Cool Stuff in Unity Tutorial"/>
+    <meta property="og:image" content="http://workshops.ko-opmode.com/share.png" />  
+    <meta property="og:description" content="Gnah! is a game about exploring and escaping giant heads. Coming to PC / Mac / Linux & More " /> 
+    <meta property="og:url" content="http://workshops.ko-opmode.com/">
+    <meta property="og:type" content="website">
+    <meta property="fb:admins" content="13616068" />
+    <meta property="fb:admins" content="538875669" />
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@koopmode">
+    <meta name="twitter:creator" content="@koopmode">
+    <meta name="twitter:title" content="How to make cool stuff in Unity for beginners">
+    <meta name="twitter:description" content="An in depth hands on way of making cool looking stuff in Unity super quickly with no programming">
+    <meta name="twitter:image:src" content="http://workshops.ko-opmode.com/images/share.png">
+    <!-- Bootstrap -->
+    <link href="/stylesheets/normalize.css?body=1" media="all" rel="stylesheet" type="text/css" />
+    <link href="/stylesheets/bootstrap.min.css?body=1" media="all" rel="stylesheet" type="text/css" />
+    <link href="/stylesheets/common.css?body=1" media="all" rel="stylesheet" type="text/css" />
+    <link href="/stylesheets/workshops.css?body=1" media="all" rel="stylesheet" type="text/css" />
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,700,900' rel='stylesheet' type='text/css'>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+  	<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<!-- Main Content --> 
+  
+<!-- Header -->
+<div class="header">
+<div class="container header">
+    <div class="row">
+        <div class="col-xs-12 top-med-spacer" align="center">
+            <h1>How to make cool stuff in Unity Tutorial 1: The Basics</h1>
+        </div>
+        <div class="col-xs-12 top-large-spacer bottom-large-spacer" align="center">
+            <p><strong><a href="#starting">Starting Out</a> | <a href="#sketchup">Sketchup</a> | <a href="#FPS">Drifter/FPS</a> | <a href="#lighting">Lighting</a> | <a href="#resources">Resources</a> | <a href="#part2">Part 2</a></strong></p>
+        </div>
+    </div>
+</div>
+</div>
+
+<div class="zero">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 top-med-spacer">
+                <img src="/images/loop.png" class="img-responsive">
+                <p class="h1">Intro</p>
+                <p>This tutorial is about empowering people who feel constrained about their lack of abilities. For example, programmers who feel like they need artists to make cool things, or artists who think they need programmers to make cool things, or even people who are neither of those who want to make cool things.</p>
+                <p class="bottom-med-spacer">The tutorial is written for folks who have no experience with Unity or 3D modelling. If you're already familiar with the basics jump down to the <a href="#lighting">lighting section</a>. Our next tutorial will focus on <em>lighting</em> in more depth and <em>particles</em>.</p> 
+                <div class="col-md-6" align="center">
+                <img src="/images/weirdforest2.png" width="600px" class="img-responsive">
+                </div>
+                <div class="col-md-6" align="center">
+                <img src="/images/hearts.png" width="600px" class="img-responsive">
+                </div>
+                <div class="col-md-6" align="center">
+                <img src="/images/room2.png" width="600px" class="img-responsive">
+                </div>
+                <div class="col-md-6 bottom-large-spacer" align="center">
+                <img src="/images/room3.png" width="600px" class="img-responsive">
+                </div>
+            
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Tutorial Begins -->
+
+<div class="one">
+    <div class="container one">
+        <div class="row">
+            <div class="col-xs-12 top-large-spacer bottom-large-spacer">
+                <p class="h1"><a name="starting">Starting Out</a></p>
+                <p class="h2">Step 1.</p>
+                <ul>
+                <li><p>Create a new Unity project</p>
+                <p><em>Things to note:</em> pay attention to where you're saving this project. A unity project is just a folder with a bunch of things in it (it's not some proprietary file like Gamemaker or Construct)</p></li>
+                <li><p>Try changing the layout, we don't really like the default Unity view. Go to Window > Layouts</p></li>
+                <li><p class="bottom-med-spacer">In your Unity project, under the Project pane, make a new folder titled "Models"</p></li>
+                </ul>
+                <div class="flex-video widescreen">
+                <iframe  src="//www.youtube.com/embed/M9rbW1_bseU?rel=0" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="two">
+    <div class="container two">
+        <div class="row">
+            <div class="col-xs-12 bottom-large-spacer"> 
+                <p class="h1 top-large-spacer"><a name="sketchup">Sketchup</a></p>
+                <p class="h2">Step 2.</p>
+                <ul>
+                <li>Download & install <strong><a href="http://www.sketchup.com">Sketchup</a></strong></li>
+                <li><p>Open up Sketchup and click the template dropdown, choose simple template: meters from the list</p></li>
+                <li><p>Select the rectangle tool. Make a plane (a plane is another word for rectangle) in Sketchup</p></li>
+                <li><p>(you can type in numbers for more exact sizes when using the rectangle tool)</p></li>
+                <li><p>Now export your plane into Unity (we'll be back to sketchup soon)</p>
+                <p>When exporting, go File > Export > 3D Model. Make sure the format is either <em>.FBX</em> or <em>.DAE</em></p></li>
+                <li><p>Options should look like this before exporting:</p><img src="/images/options.png" class="img-responsive bottom-xsmall-spacer"></li>
+                <li><p>Export your model into the Unity project's Assets folder, into the "Models" folder that you created</p></li>
+                <li><p>Now your exported model should appear in the Unity project pane.</p></li>
+                <li><p>Select the model file and make sure the scale factor is set to "1"</p> <img src="/images/scalefactor.png" class="img-responsive bottom-xsmall-spacer"></li>
+                <li><p>Select the model, and drag it into the hierarchy pane. It should now appear in the scene view in Unity</p></li>
+                <li><p>Tip: you can select the model in the hierarchy view, then go to > Edit > Frame Selected (F). This lets you find objects in the scene view.</p></li>
+                </ul>
+                <div class="flex-video widescreen">
+                <iframe  src="//www.youtube.com/embed/PPsob6KZJ9Y?rel=0" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <p class="h2">Step 3.</p>
+                <ul>
+                <li><p>Back to Sketchup to familiarize yourself with some tools</p></li>
+                <li><p>Navigation:</p>
+                <p>Navigation between Sketchup and Unity are totally different unfortunately. Thankfully the following tools make it a bit easier to move around in Sketchup. You should familiarize yourself with them.</p>
+                <img src="/images/navigation.png" class="img-responsive bottom-xsmall-spacer">
+                <p>Tip: a 3 button mouse is a huge help. Middle mouse orbits, scrolling zooms in and out. Using Shift+ Middle Button activates the hand tool.</p></li>
+
+                <li><p>Tools:</p>
+                <img src="/images/tools.png" class="img-responsive bottom-xsmall-spacer">
+                <p>Shape tool: makes cool shapes. This is how you made a plane earlier</p>
+                <p>Pen tool: lets you draw arbitrary lines that snap to edges. You can draw on walls (this is how you can make windows or doors)</p>
+                <p>Push Pull: grab a face, and then push or pull it. This is also good for cutting out things</p>
+                <p>Offset tool: It is cool, mess around with it</p></li>
+                </ul>
+                <div class="flex-video widescreen">
+                <iframe  src="//www.youtube.com/embed/EELaNoAdo8A?rel=0" frameborder="0" allowfullscreen></iframe>
+                </div>
+
+                <p class="h2">Step 4.</p>
+                <ul>
+                <li><p>Now you want to re-export your model and overwrite your previous file that you exported to Unity.</p>
+                <p><strong>THIS IS REALLY IMPORTANT</strong>: you want to overwrite your previous file because it'll autoupdate in Unity allowing you to jump between the two programs, mess around, and see your changes reflected right away.</p></li>
+                </ul>
+                <div class="flex-video widescreen">
+                <iframe  src="//www.youtube.com/embed/EtCKh5_O7a0?rel=0" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="three">
+    <div class="container three">
+        <div class="row">
+            <div class="col-xs-12 bottom-large-spacer"> 
+                <p class="h1 top-large-spacer"><a name="FPS">FPS/Drifter</a></p>
+                <p class="h2">Step 5.</p>
+                <ul>
+                <li><p>You'll want to download and import <a href="https://twitter.com/torahhorse"><strong>Ben Espisito's</strong></a> Drifter plugin. Drifter is fantastic because it allows you to have a versatile first person control scheme that is much better than Unity's defaults. Get it here: <strong><a href="http://torahhorse.com/first-person-drifter-controller-for-unity3d">Drifter</a></strong></p></li>
+                <li><p>Double click on the Unity package you downloaded, then click import on the pop-up in unity (make sure everything has a checkmark)</p><img src="/images/import.png" class="img-responsive bottom-xsmall-spacer"></li>
+
+                <li><p>In Unity: select your main camera in the hierarchy pane and delete it.</p></li>
+                <li><p>In the project pane find the First Person Drifter Controller, select the player object, and drag it into your hierarchy.</p></li>
+                <li><p>If you try playing the game now, your character should be in the gameworld, but they will fall through any models because there are no collisions setup.</p></li>
+               <li><p>Select your game object called Mesh (your gameworld you're building in Sketchup) in the hierarchy. Depending on what you made in sketchup you might have a bunch of meshes. You'll want to select all the Meshes you have and add a Mesh Collider.</p><img src="/images/mesh.gif" class="img-responsive bottom-xsmall-spacer"></li>
+                <li><p>Now press play and walk around your world! It'll be super dark because we haven't put any lights in the scene yet.</p></li>
+                <li><p>Add a light by clicking "create" in the Hierarchy pane and choose Directional Light. Things should be a bit more visible now. We'll return to lighting later.</p></li>
+                <li><p>Select your player component in the Hierarchy and check out what values you can mess around with.</p></li>
+                <li><p>Now that you can run around in your level, you might want to jump back to Sketchup and make changes and start building your world.</p></li>
+                </ul>
+                <div class="flex-video widescreen">
+                <iframe  src="//www.youtube.com/embed/WRsNdkqaozQ?rel=0" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <p>Mess around with Drifter's defaults to make different feeling movements</p>
+                <div class="flex-video widescreen">
+                <iframe  src="//www.youtube.com/embed/cPaaezCZhTQ?rel=0" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <p>Maybe try colouring your world in Sketchup [this video has a lot of flailing around] </p>
+                     <div class="flex-video widescreen">
+                <iframe  src="//www.youtube.com/embed/YJK2Qmlkvzc?rel=0" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="four">
+    <div class="container four">
+        <div class="row">
+            <div class="col-xs-12 bottom-large-spacer"> 
+
+                <p class="h1 top-large-spacer"><a class="title" name="lighting">Lighting</a> (or how to make it look cool)</p>
+                <p>First start off by watch a few minutes of this video</p>
+                <div class="flex-video widescreen">
+                <iframe src="//www.youtube.com/embed/zjjkB2NYpWw?start=1179&end=1381&feature=player_detailpage" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <p class="h2">Step 6.</p>
+                <ul>
+                <li><p>A quick overview on lights in Unity</p></li>
+                <li><p>Directional Lights: these light everything in a direction regardless of walls and stuff. They simulate the sun</p></li>
+                <li><p>Spotlights: A cone of light that works like a spotlight</p></li>
+                <li><p>Point Lights: A point of light that starts from the center and emits outwards. Good for indoor lighting like lamps or torches</p></li>
+                <li><p>Mess around with the direction and orientation of the directional light.</p></li>
+                <li><p>You want to mess around with these lights and make them look good. For example, changing the default colours on the lights.</p></li>
+                </ul>
+                <div class="flex-video widescreen">
+                <iframe src="//www.youtube.com/embed/pB3Ouk16ycA?start=1179&end=1381&feature=player_detailpage" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <p class="h2">Step 7.</p>
+                <ul>
+                <li><p>Select the Main Camera (which is contained under the Player your Hierarchy) and change the background colour to something cool. This will change the ugly grey colour that's defaulted for the sky.</p></li>
+                <li><p>Go to Edit > Render Settings in Unity and turn on fog. Set its color to something and then add some density.</p></li>
+                <li><p>Change the ambient light to something different and tweak its intensity</p></li>
+                </ul>
+                <div class="flex-video widescreen">
+                <iframe src="//www.youtube.com/embed/Gxr88ppm1Nc?start=1179&end=1381&feature=player_detailpage" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <p>Tip: set the ambient light to 100% and color each face of your world in sketchup for a cool aesthetic.
+                <img src="" class="img-responsive">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="five">
+    <div class="container five bottom-large-spacer">
+        <div class="row">
+            <div class="col-xs-12"> 
+                <p class="h1 top-large-spacer"><a name="resources">Resources</a></p>
+                <p>You can download some of our Unity Projects to get an idea for how we made a few things</p>
+                <strong><p><a href="/downloads/workshop1.zip">Hearts and Flood</a></p>
+                <p><a href="/downloads/workshop2.zip">Flat Forest</a></p></strong>
+                 <p>We use a few scripts and shaders in those scenes that you can download here: <strong><a href="https://github.com/bzgeb/UnityCommonAssets">Common Unity Assets</a></strong>.</p>
+                <p>We'll be explaining in more depth what some of those assets do in the future, but feel free to try applying scripts and shaders to your game to see what happens.</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="six">
+    <div class="container six bottom-small-spacer">
+        <div class="row">
+            <div class="col-xs-12"> 
+                <p class="h1 top-large-spacer"><a name="part2">Part 2</a></p>
+                <p><em>Coming Soon. Featuring Particles & more lighting techniques.</em></p>
+                <p class="bottom-small-spacer">Questions or Feedback? <strong><a href="mailto:contact@ko-opmode.com">Send us an email</a></strong></p>
+                <p>Follow us to find out when the next tutorial goes live</p>
+                <a href="https://twitter.com/KOOPMode" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @KOOPMode</a>
+                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+            </div>
+            <div class="col-xs-12 bottom-med-spacer">
+                <div class="fb-like" data-href="https://facebook.com/koopmode" data-layout="standard" data-action="like" data-show-faces="false" data-share="false"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="seven">
+    <div class="container seven">
+        <div class="row">
+                        <div class="col-xs-12 top-small-spacer bottom-xsmall-spacer" align="center">
+                <p>This tutorial was made by Bronson Zgeb and G.P. Lackey of <strong><a class="seven" href="http://www.ko-opmode.com">KO-OP</a></strong></p>
+                <a href="https://twitter.com/bzgeb" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @bzgeb</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+<a href="https://twitter.com/mousefountain" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @Mousefountain</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<!-- closing body and html -->
+   
+<!-- Google Analytics -->
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-30393443-1']);
+    _gaq.push(['_setDomainName', 'ko-opmode.com']);
+    _gaq.push(['_trackPageview']);
+    
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    </script>
+  </body>
+</html>
