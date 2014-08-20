@@ -73,8 +73,8 @@
             <div class="col-xs-12 top-med-spacer">
                 <img src="/images/loop.png" class="img-responsive">
                 <p class="h1">Intro</p>
-                <p>This tutorial is about empowering people who feel constrained about their lack of abilities. For example, programmers who feel like they need artists to make cool things, or artists who think they need programmers to make cool things, or even people who are neither of those who want to make cool things.</p>
-                <p>The tutorial is written for folks who have no experience with Unity or 3D modelling. If you're already familiar with the basics jump down to the <a href="#lighting">lighting section</a>. Our next tutorial will focus on <em>lighting</em> in more depth and <em>particles</em>.</p>
+                <p>This tutorial is about empowering people who feel constrained by their lack of experience. For example, programmers who feel like they need artists to make cool things, or artists who think they need programmers to make cool things, or even people who are neither of those who want to make cool things.</p>
+                <p>The tutorial is written for folks who have no experience with Unity or 3D modelling. If you're already familiar with the basics jump down to the <a href="#lighting">lighting section</a>. Our next tutorial will focus on lighting and particles in more depth.</p>
                 <p class="top-small-spacer bottom-med-spacer">Help us spread the word about this tutorial <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://workshops.ko-opmode.com" data-text="A beginners tutorial to making cool stuff in Unity quickly without programming" data-via="KOOPMode" data-size="large">Tweet</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></p>
 
@@ -132,7 +132,7 @@
                 <li><p>Options should look like this before exporting:</p><img src="/images/options.png" class="img-responsive bottom-xsmall-spacer"></li>
                 <li><p>Export your model into the Unity project's Assets folder, into the "Models" folder that you created</p></li>
                 <li><p>Now your exported model should appear in the Unity project pane.</p></li>
-                <li><p>Select the model file and make sure the scale factor is set to "1"</p> <img src="/images/scalefactor.png" class="img-responsive bottom-xsmall-spacer"></li>
+                <li><p>Select the model file and make sure the scale factor is set to "1". <em>Note: if you're using .DAE your scale factor should be set to .025</em></p> <img src="/images/scalefactor.png" class="img-responsive bottom-xsmall-spacer"></li>
                 <li><p>Select the model, and drag it into the hierarchy pane. It should now appear in the scene view in Unity</p></li>
                 <li><p>Tip: you can select the model in the hierarchy view, then go to > Edit > Frame Selected (F). This lets you find objects in the scene view.</p></li>
                 </ul>
@@ -149,10 +149,14 @@
 
                 <li><p>Tools:</p>
                 <img src="/images/tools.png" class="img-responsive bottom-xsmall-spacer">
-                <p>Shape tool: makes cool shapes. This is how you made a plane earlier</p>
                 <p>Pen tool: lets you draw arbitrary lines that snap to edges. You can draw on walls (this is how you can make windows or doors)</p>
+                <p>Arc tool: the 2 point arc tool lets you draw curves, which is great for making rounded corners</p>
+                <p>Shape tool: makes cool shapes. This is how you made a plane earlier</p>
                 <p>Push Pull: grab a face, and then push or pull it. This is also good for cutting out things</p>
                 <p>Offset tool: It is cool, mess around with it</p></li>
+                <p>Move tool: lets you move an individual face or a bunch of stuff at once. Hold alt to duplicate and move an object</p>
+                <p>Rotation tool: Same as move tool but for rotations</p>
+                <p>Scale tool: scales the size of your models</p>
                 </ul>
                 <div class="flex-video widescreen">
                 <iframe  src="//www.youtube.com/embed/EELaNoAdo8A?rel=0" frameborder="0" allowfullscreen></iframe>
@@ -183,7 +187,7 @@
                 <li><p>In Unity: select your main camera in the hierarchy pane and delete it.</p></li>
                 <li><p>In the project pane find the First Person Drifter Controller, select the player object, and drag it into your hierarchy.</p></li>
                 <li><p>If you try playing the game now, your character should be in the gameworld, but they will fall through any models because there are no collisions setup.</p></li>
-               <li><p>Select your game object called Mesh (your gameworld you're building in Sketchup) in the hierarchy. Depending on what you made in sketchup you might have a bunch of meshes. You'll want to select all the Meshes you have and add a Mesh Collider.</p><img src="/images/mesh.gif" class="img-responsive bottom-xsmall-spacer"></li>
+               <li><p>Select your game object called Mesh (the gameworld you're building in Sketchup) in the hierarchy. Depending on what you made in sketchup you might have a bunch of meshes. You'll want to select all the Meshes you have and add a Mesh Collider.</p><img src="/images/mesh.gif" class="img-responsive bottom-xsmall-spacer"></li>
                 <li><p>Now press play and walk around your world! It'll be super dark because we haven't put any lights in the scene yet.</p></li>
                 <li><p>Add a light by clicking "create" in the Hierarchy pane and choose Directional Light. Things should be a bit more visible now. We'll return to lighting later.</p></li>
                 <li><p>Select your player component in the Hierarchy and check out what values you can mess around with.</p></li>
@@ -217,14 +221,14 @@
                 <p class="h2">Step 6.</p>
                 <ul>
                 <li><p>A quick overview on lights in Unity</p></li>
-                <li><p>Directional Lights: these light everything in a direction regardless of walls and stuff. They simulate the sun</p></li>
+                <li><p>Directional Lights: These simulate the sun, and light everything from a given direction regardless of walls and stuff.</p></li>
                 <li><p>Spotlights: A cone of light that works like a spotlight</p></li>
                 <li><p>Point Lights: A point of light that starts from the center and emits outwards. Good for indoor lighting like lamps or torches</p></li>
                 <li><p>Mess around with the direction and orientation of the directional light.</p></li>
                 <li><p>You want to mess around with these lights and make them look good. For example, changing the default colours on the lights.</p></li>
                 </ul>
                 <div class="flex-video widescreen">
-                <iframe src="//www.youtube.com/embed/pB3Ouk16ycA?start=1179&end=1381&feature=player_detailpage" frameborder="0" allowfullscreen></iframe>
+                <iframe src="//www.youtube.com/embed/pB3Ouk16ycA?rel=0" frameborder="0" allowfullscreen></iframe>
                 </div>
                 <p class="h2">Step 7.</p>
                 <ul>
@@ -233,7 +237,7 @@
                 <li><p>Change the ambient light to something different and tweak its intensity</p></li>
                 </ul>
                 <div class="flex-video widescreen">
-                <iframe src="//www.youtube.com/embed/Gxr88ppm1Nc?start=1179&end=1381&feature=player_detailpage" frameborder="0" allowfullscreen></iframe>
+                <iframe src="//www.youtube.com/embed/Gxr88ppm1Nc?rel=0" frameborder="0" allowfullscreen></iframe>
                 </div>
                 <p>Tip: set the ambient light to 100% and color each face of your world in sketchup for a cool aesthetic.
             </div>
@@ -295,7 +299,7 @@
             </div>
             <div class="col-md-6 bottom-large-spacer">
                 <a href="https://www.dropbox.com/s/p1ffv44ezuj98ik/YouAndYouAlone.zip"><img src="/images/foryou.jpeg" class="img-responsive bottom-small-spacer" width="400px"></a>
-                <p><strong>For You</strong></p>
+                <p><strong>This City Was Built For You and You Alone</strong></p>
                 <p><strong>By: </strong><a href="https://twitter.com/thejhyde"><em>@thejhyde</em></a> </p></p>
                 <p><strong>Play it here:</strong> <a href="https://www.dropbox.com/s/p1ffv44ezuj98ik/YouAndYouAlone.zip">Web Player Build</a></p>
                 <p><strong>More Info:</strong> <a href="http://tmblr.co/ZQQGFs1F996ts">Blog post about For You</a></p>
