@@ -55,6 +55,10 @@ app.get('/', function (req, res) {
   res.render('index.html', { layout: false });
 });
 
+app.get('/sp', function (req, res) {
+  res.render('index-sp.html', { layout: false });
+});
+
 app.post('/mailing_list/subscribe', function (req, res) {
   var email = req.body.email;
   subscribe(email, mc_interest_group, res);
