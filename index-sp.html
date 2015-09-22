@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Make Weird Stuff in Unity Tutorial</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="An in depth hands on way of making cool looking stuff in Unity super quickly with no programming">
+ <!--   <meta property="og:title" content="How to make cool stuff in Unity for beginners" /> 
+    <meta property="og:site_name" content="Make Cool Stuff in Unity Tutorial"/>
+    <meta property="og:description" content="An in depth hands on way of making cool looking stuff in Unity super quickly with no programming" /> 
+    <meta property="og:image" content="http://workshops.ko-opmode.com/facebookforest.png">
+    <meta property="og:url" content="http://workshops.ko-opmode.com/">
+    <meta property="og:type" content="website">
+    <meta property="fb:admins" content="13616068" />
+    <meta property="fb:admins" content="538875669" /> -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@koopmode">
+    <meta name="twitter:creator" content="@koopmode">
+    <meta name="twitter:title" content="How to make cool stuff in Unity for beginners">
+    <meta name="twitter:description" content="An in depth hands on way of making cool looking stuff in Unity super quickly with no programming">
+    <meta name="twitter:image:src" content="http://workshops.ko-opmode.com/images/share.png">
+    <!-- Typekit -->
+    <script src="//use.typekit.net/saa8wux.js"></script>
+    <script>try{Typekit.load();}catch(e){}</script> 
+    <!-- Bootstrap -->
+    <link href="/stylesheets/normalize.css?body=1" media="all" rel="stylesheet" type="text/css" />
+    <link href="/stylesheets/bootstrap.min.css?body=1" media="all" rel="stylesheet" type="text/css" />
+    <link href="/stylesheets/common.css?body=1" media="all" rel="stylesheet" type="text/css" />
+    <link href="/stylesheets/workshops.css?body=1" media="all" rel="stylesheet" type="text/css" />
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,700,900' rel='stylesheet' type='text/css'>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+  	<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<!-- Main Content --> 
+  
+<!-- Header -->
+<div class="header">
+<div class="container header">
+    <div class="row">
+        <div class="col-xs-12 top-med-spacer" align="center">
+            <h1>Cómo hacer cosas cool en Unity</h1>
+            <h2>Tutorial 1: Lo Básico</h2>
+        </div>
+        <div class="col-xs-12 top-large-spacer bottom-large-spacer" align="center">
+            <p><strong><a href="#starting">Starting Out</a> | <a href="#sketchup">Sketchup</a> | <a href="#FPS">Drifter/FPS</a> | <a href="#lighting">Lighting</a> | <a href="#resources">Resources</a> | <a href="#part2">Part 2</a> | <a href="#gallery">Gallery</a> </strong></p>
+        </div>
+        <div class="col-xs-12 top-med-spacer bottom-xsmall-spacer" align="center">
+                <p>This tutorial was made by Bronson Zgeb and G.P. Lackey of <strong><a href="http://www.ko-opmode.com">KO-OP</a></strong></p>
+                <a href="https://twitter.com/bzgeb" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @bzgeb</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+<a href="https://twitter.com/mousefountain" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @Mousefountain</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+            <p class="top-small-spacer">Translation by Jorge Luis De Alba</p>
+             <a href="https://twitter.com/TheJorlu" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @TheJorlu</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+            </div>
+    </div>
+</div>
+</div>
+
+<div class="zero">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 top-med-spacer">
+                <img src="/images/loop.png" class="img-responsive">
+                <p class="h1">Intro</p>
+                <p>Este tutorial tiene como objetivo darle herramientas a aquellas personas que se sienten restringidas por su falta de experiencia. Por ejemplo, programadores que sienten que necesitan artistas para hacer cosas cool, o artistas que creen que necesitan programadores para hacer cosas cool, o incluso personas que no son ni artistas ni programadores pero quieren hacer cosas cool.</p>
+                <p>Este tutorial está escrito por personas que no tienen experiencia con Unity o modelado 3D. Si ya estás familiarizado con lo básico puedes adelantarte a la sección de <a href="#lighting">iluminación</a>. Nuestro próximo tutorial se enfocará en iluminación y partículas a mayor detalle.</p>
+                <p class="top-small-spacer bottom-med-spacer">Ayúdanos a correr la voz sobre este tutorial <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://workshops.ko-opmode.com" data-text="A beginners tutorial to making cool stuff in Unity quickly without programming" data-via="KOOPMode" data-size="large">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></p>
+
+                <div class="col-md-6" align="center">
+                <img src="/images/weirdforest2.png" width="600px" class="img-responsive">
+                </div>
+                <div class="col-md-6" align="center">
+                <img src="/images/hearts.png" width="600px" class="img-responsive">
+                </div>
+                <div class="col-md-6" align="center">
+                <img src="/images/room2.png" width="600px" class="img-responsive">
+                </div>
+                <div class="col-md-6 bottom-large-spacer" align="center">
+                <img src="/images/room3.png" width="600px" class="img-responsive">
+                </div>
+            
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Tutorial Begins -->
+
+<div class="one">
+    <div class="container one">
+        <div class="row">
+            <div class="col-xs-12 top-large-spacer bottom-large-spacer">
+                <p class="h1"><a name="starting">Empezando</a></p>
+                <p class="h2">Paso 1.</p>
+                <ul>
+                <li><p>Crear un nuevo proyecto en Unity</p>
+                <p><em>Nota:</em> Presta atención a donde salvas este proyecto. Un proyecto de Unity es tan solo una carpeta con un montón de cosas dentro (No es un archivo propietario como en Gamemaker o Construct)</p></li>
+                <li><p>Intenta cambiar el acomodo del editor, no nos gusta la vista predeterminada de Unity. Ve a Window > Layouts</p></li>
+                <li><p class="bottom-med-spacer">En tu proyecto de Unity, debajo del panel Project, crea un nuevo folder llamado “Modelos”</p></li>
+                </ul>
+                <div class="flex-video widescreen">
+                <iframe  src="//www.youtube.com/embed/M9rbW1_bseU?rel=0" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="two">
+    <div class="container two">
+        <div class="row">
+            <div class="col-xs-12 bottom-large-spacer"> 
+                <p class="h1 top-large-spacer"><a name="sketchup">Sketchup</a></p>
+                <p class="h2">Paso 2.</p>
+                <ul>
+                <li>Descarga e instala <strong><a href="http://www.sketchup.com">Sketchup</a></strong></li>
+                <li><p>Abre Sketchup y da clic en el menú desplegable Template, escoge Simple Template - Meters de la lista.</p></li>
+                <li><p>Selecciona la herramienta de rectángulo. Crea un plano (plano es otra palabra para rectángulo) en Sketchup.</p></li>
+                <li><p>(puedes escribir números para obtener tamaños más exactos al usar la herramienta de rectángulo)</p></li>
+                <li><p>Ahora exporta tu plano a Unity (regresaremos a Sketchup pronto)</p>
+                <p>Al exportar, ve a File > Export > 3D Model. Asegúrate de que el formato sea <em>.FBX</em> o <em>.DAE</em></p></li>
+                <li><p>Options debe verse así antes de exportar:</p><img src="/images/options.png" class="img-responsive bottom-xsmall-spacer"></li>
+                <li><p>Exporta tu modelo a la carpeta “Modelos” que creaste dentro de la carpeta Assets de tu proyecto de Unity.</p></li>
+                <li><p>Ahora tu modelo exportado debe aparecer en Unity dentro del panel Project.</p></li>
+                <li><p>Selecciona el archivo del modelo y asegurate de que el scale factor sea “1”. <em>Nota: Si estás usando el formato .DAE tu scale factor debería estar en .025</em></p> <img src="/images/scalefactor.png" class="img-responsive bottom-xsmall-spacer"></li>
+                <li><p>Selecciona el modelo y arrástralo hacia el panel Hierarchy. Ahora debe aparecer en la vista de Scene dentro de Unity.</p></li>
+                <li><p>Tip: Puedes seleccionar el modelo en el panel Hierarchy, luego ir a Edit > Frame Selected (F). Esto te permite encontrar objetos en la escena.</p></li>
+                </ul>
+                <div class="flex-video widescreen">
+                <iframe  src="//www.youtube.com/embed/PPsob6KZJ9Y?rel=0" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <p class="h2">Paso 3.</p>
+                <ul>
+                <li><p>Regresemos a Sketchup para familiarizarnos con algunas herramientas.</p></li>
+                <li><p>Navegación:</p>
+                <p>Lamentablemente la navegación de Sketchup y la de Unity son completamente diferentes. Sin embargo las siguientes herramientas nos ayudarán movernos fácilmente dentro de Sketchup. Es importante familiarizarse con ellas.</p>
+                <img src="/images/navigation.png" class="img-responsive bottom-xsmall-spacer">
+                <p>Tip: El tercer botón del mouse es una gran ayuda. Presionar el botón medio del mouse rota la cámara y al girar la rueda del mouse se hace zoom.</p></li>
+
+                <li><p>Herramientas:</p>
+                <img src="/images/tools.png" class="img-responsive bottom-xsmall-spacer">
+                <p>Herramienta de pluma: Te permite dibujar líneas arbitrarias que se pegan a los bordes. Puedes dibujar en las paredes (así es como puedes hacer ventanas o puertas).</p>
+                <p>Herramienta de arco: El arco de 2 puntos te permite dibujar curvas, lo cual es genial para hacer esquinas redondeadas.</p>
+                <p>Herramienta de forma: Hace figuras cool. Así es como hicimos el plano anteriormente.</p>
+                <p>Jala Empuja: Agarra una cara y después jálala o empújala. Esto también es útil para cortar cosas.</p>
+                <p>Herramienta de offset: Es genial, juega con ella.</p></li>
+                <p>Herramienta de movimiento: Te permite mover una cara individual o un montón de cosas a la vez. Deja presionado alt para mover un objeto completo.</p>
+                <p>Herramienta de rotación: Igual que la herramienta de movimiento, pero para rotaciones.</p>
+                <p>Herramienta de escala: Escala el tamaño de tus modelos.</p>
+                </ul>
+                <div class="flex-video widescreen">
+                <iframe  src="//www.youtube.com/embed/EELaNoAdo8A?rel=0" frameborder="0" allowfullscreen></iframe>
+                </div>
+
+                <p class="h2">Paso 4.</p>
+                <ul>
+                <li><p>Ahora re-exporta tu modelo y sobreescribe el archivo anterior que exportaste a Unity.</p>
+                <p><strong>ESTO ES MUY IMPORTANTE</strong>: Debemos sobreescribir el archivo anterior porque automáticamente se actualizará en Unity, permitiendote saltar entre los 2 programas, juega un poco y ve tus cambios reflejados inmediatamente.</p></li>
+                </ul>
+                <div class="flex-video widescreen">
+                <iframe  src="//www.youtube.com/embed/EtCKh5_O7a0?rel=0" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="three">
+    <div class="container three">
+        <div class="row">
+            <div class="col-xs-12 bottom-large-spacer"> 
+                <p class="h1 top-large-spacer"><a name="FPS">FPS/Drifter</a></p>
+                <p class="h2">Paso 5.</p>
+                <ul>
+                <li><p>Querrás descargar e importar el plugin <a href="https://twitter.com/torahhorse"><strong>Drifter</strong></a> de Ben Esposito. Drifter es fantástico porque te permite tener un control en primera persona versátil y mucho mejor que el predeterminado de Unity. Obténlo aquí: <strong><a href="http://torahhorse.com/first-person-drifter-controller-for-unity3d">Drifter</a></strong></p></li>
+                <li><p>Da doble clic en el paquete de Unity que descargaste, luego da clic en el botón de Import en la ventana que abrió Unity (asegúrate de que todo esté seleccionado).</p><img src="/images/import.png" class="img-responsive bottom-xsmall-spacer"></li>
+
+                <li><p>En Unity: Selecciona la cámara principal (Main Camera) en el panel de Hierarchy y bórrala.</p></li>
+                <li><p>En el panel de Project busca First Person Drifter Controller, selecciona el objeto de jugador (player) y arrástralo al panel de Hierarchy.</p></li>
+                <li><p>Si intentas jugar el juego ahora tu personaje debe estar en el mundo de juego, pero atravesará cualquier modelo porque no hay colisiones configuradas.</p></li>
+               <li><p>Selecciona tu objeto llamado “Mesh” (el mundo que estás construyendo en Sketchup) en Hierarchy. Dependiendo de lo que creaste en Sketchup puede que tengas múltiples meshes. Selecciona todos los meshes y añadeles un Mesh Collider.</p><img src="/images/mesh.gif" class="img-responsive bottom-xsmall-spacer"></li>
+                <li><p>¡Presiona Play y camina en tu mundo! Estará súper oscuro porque no hemos puesto luces en la escena aún.</p></li>
+                <li><p>Añade una luz dando clic en “Create” en el panel Hierarchy y escoge Directional Light. Las cosas deben ser más visibles ahora. Regresaremos a iluminación después.</p></li>
+                <li><p>Selecciona tu jugador en Hierarchy y revisa qué valores puedes cambiar y experimentar con.</p></li>
+                <li><p>Ahora que puedes correr alrededor de tu nivel, es buen momento para regresar a Sketchup y hacer cambios para comenzar a construir tu mundo.</p></li>
+                </ul>
+                <div class="flex-video widescreen">
+                <iframe  src="//www.youtube.com/embed/WRsNdkqaozQ?rel=0" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <p>Experimenta con los valores predeterminados de Drifter para hacer movimientos que se sientan diferentes.</p>
+                <div class="flex-video widescreen">
+                <iframe  src="//www.youtube.com/embed/cPaaezCZhTQ?rel=0" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <p>Tal vez intenta colorear tu mundo en Sketchup [este video da muchas vueltas] </p>
+                     <div class="flex-video widescreen">
+                <iframe  src="//www.youtube.com/embed/YJK2Qmlkvzc?rel=0" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="four">
+    <div class="container four">
+        <div class="row">
+            <div class="col-xs-12 bottom-large-spacer"> 
+
+                <p class="h1 top-large-spacer"><a class="title" name="lighting">Iluminación</a> ((o cómo hacer que se vea cool)</p>
+                <p>Comienza viendo unos cuantos minutos de este video.</p>
+                <div class="flex-video widescreen">
+                <iframe src="//www.youtube.com/embed/zjjkB2NYpWw?start=1179&end=1381&feature=player_detailpage" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <p class="h2">Paso 6.</p>
+                <ul>
+                <li><p>Un breve repaso de las luces en Unity.</p></li>
+                <li><p>Directional Lights: Estas luces simulan el Sol e iluminan todo desde cualquier dirección sin importar paredes y cosas.</p></li>
+                <li><p>Spotlights: Un cono de luz que funciona como un reflector. </p></li>
+                <li><p>Point Lights: Un punto de luz que comienza desde el centro y emite luz hacia afuera. Buena para iluminación de interiores como lámparas o antorchas.</p></li>
+                <li><p>Experimenta con la dirección y orientación de la luz direccional. </p></li>
+                <li><p>Hay que experimentar con estas luces y hacer que luzcan bien. Por ejemplo, cambiando su color predeterminado.</p></li>
+                </ul>
+                <div class="flex-video widescreen">
+                <iframe src="//www.youtube.com/embed/pB3Ouk16ycA?rel=0" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <p class="h2">Paso 7.</p>
+                <ul>
+                <li><p>Selecciona la Main Camera (se encuentra dentro del objeto Player en el panel Hierarchy) y cambia el color del fondo (background color) a algo cool. Esto cambiará ese feo color gris que está predeterminado en el cielo.</p></li>
+                <li><p>Ve a Edit > Render Settings en Unity y enciende la opción fog. Escoge su color y agrega densidad. </p></li>
+                <li><p>Cambia la Ambient Light a algo diferente y experimenta con su intensidad.</p></li>
+                </ul>
+                <div class="flex-video widescreen">
+                <iframe src="//www.youtube.com/embed/Gxr88ppm1Nc?rel=0" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <p>Tip: Configura la Ambient Light a 100% y asigna colores a cada cara de tu mundo en Sketchup para una estética cool.</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="five">
+    <div class="container five bottom-large-spacer">
+        <div class="row">
+            <div class="col-xs-12"> 
+                <p class="h1 top-large-spacer"><a name="resources">Recursos</a></p>
+                <p>Puedes descargar algunos de nuestros proyectos de Unity para darte una idea de cómo hemos hecho algunas cosas.</p>
+                <strong><p><a href="/downloads/workshop1.zip">Hearts and Flood</a></p>
+                <p><a href="/downloads/workshop2.zip">Flat Forest</a></p></strong>
+                 <p>Utilizamos unos cuantos scripts y shaders en esas escenas que puedes descargar de aquí: <strong><a href="https://github.com/bzgeb/UnityCommonAssets">Common Unity Assets</a></strong>.</p>
+                <p>Explicaremos más a fondo lo que algunos de estos recursos hacen en un futuro, pero no dudes en experimentar aplicando scripts y shaders a tu juego y ver que sucede. </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="six">
+    <div class="container six bottom-small-spacer">
+        <div class="row">
+            <div class="col-xs-12"> 
+                <p class="h1 top-large-spacer"><a name="part2">Part 2</a></p>
+                <p class="bottom-small-spacer"><em>Proximamente. Sobre partículas y más técnicas de iluminación.</em></p>
+                <p class="bottom-small-spacer">¿Preguntas o comentarios?  <strong><a href="mailto:contact@ko-opmode.com">Envíanos un correo electrónico.</a></strong></p>
+                <p class="bottom-small-spacer">Si este tutorial te fue útil, ayúdanos a correr la voz sobre el:  <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://workshops.ko-opmode.com" data-text="A beginners tutorial to making cool stuff in Unity quickly without programming" data-via="KOOPMode" data-size="large">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></p>
+                <p>Síguenos para enterarte cuando subamos el próximo tutorial. </p>
+                <a href="https://twitter.com/KOOPMode" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @KOOPMode</a>
+                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+            </div>
+            <div class="col-xs-12 bottom-med-spacer">
+                <div class="fb-like" data-href="https://facebook.com/koopmode" data-layout="standard" data-action="like" data-show-faces="false" data-share="false"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="gallery">
+    <div class="container gallery">
+        <div class="row">
+            <div class="col-xs-12 bottom-large-spacer">
+                <p class="clear h1 top-large-spacer"><a name="gallery">Galería</a></p>
+                <p>Esta es una colección de juegos y arte hechos usando este taller, por personas de múltiples niveles de habilidad. </p>
+                <p><strong><em><a href="mailto:contact@ko-opmode.com?subject=Workshop Submission">Envíanos tu proyecto</em></a></strong> y lo añadiremos a la galería.</p>
+            </div>
+            <div class="col-md-6 bottom-large-spacer">
+                <a href="/images/mokuso.png"><img src="/images/mokuso.png" class="img-responsive bottom-small-spacer" width="400px"></a>
+                <p><strong>Mokuso</strong></p>
+                <p><strong>By: </strong><a href="https://twitter.com/arnaud_debock"><em>@arnaud_debock</em></a> </p>
+                <p><strong>More Info:</strong> <a href="http://makega.me/t/wip-mokuso-a-pictural-approach-to-a-first-person-non-shooter-game/835">Makega.me Forum Post</a></p>
+            </div>
+            <div class="col-md-6 bottom-large-spacer">
+                <a href="https://dl.dropboxusercontent.com/u/72508532/The%20Room%20Web.html"><img src="/images/theroom.png" class="img-responsive bottom-small-spacer" width="400px"></a>
+                <p><strong>The Room</strong></p>
+                <p><strong>By: </strong><a href="https://twitter.com/mr_tedders"><em>@Mr_Tedders</em></a> </p>
+                <p><strong>Play it here:</strong> <a href="https://dl.dropboxusercontent.com/u/72508532/The%20Room%20Web.html">Web Player Build</a></p>
+            </div>
+            <div class="col-md-6 bottom-large-spacer">
+                <a href="https://www.dropbox.com/s/p1ffv44ezuj98ik/YouAndYouAlone.zip"><img src="/images/foryou.jpeg" class="img-responsive bottom-small-spacer" width="400px"></a>
+                <p><strong>This City Was Built For You and You Alone</strong></p>
+                <p><strong>By: </strong><a href="https://twitter.com/thejhyde"><em>@thejhyde</em></a> </p></p>
+                <p><strong>Play it here:</strong> <a href="https://www.dropbox.com/s/p1ffv44ezuj98ik/YouAndYouAlone.zip">Web Player Build</a></p>
+                <p><strong>More Info:</strong> <a href="http://tmblr.co/ZQQGFs1F996ts">Blog post about For You</a></p>
+            </div>
+            <div class="col-md-6 bottom-large-spacer">
+                <a href="/images/petrol.jpeg"><img src="/images/petrol.jpeg" class="img-responsive bottom-small-spacer" width="400px"></a>
+                <p><strong>Petrol Station</strong>
+                <p><strong>By: </strong><a href="https://twitter.com/tigershungry"><em>@tigershungry</em></a></p>
+            </div>
+            <div class="clearfix"></div>
+            <div class="col-md-6 bottom-large-spacer">
+                <a href="https://dl.dropboxusercontent.com/s/53q8wee449fxc0o/Glasses.rar?dl=1&token_hash=AAHypMN3_R7nhvMBaZWIJilPhq2up22mN_RAKQI-qj2Jvg"><img src="/images/glasses.png" class="img-responsive bottom-small-spacer" width="400px"></a>
+                <p><strong>Glasses Simulator</strong></p>
+                <p><strong>By: </strong><a href="https://twitter.com/nkornek"><em>@nkornek</em></a> </p>
+                <p><strong>Play it here:</strong> <a href="https://dl.dropboxusercontent.com/s/53q8wee449fxc0o/Glasses.rar?dl=1&token_hash=AAHypMN3_R7nhvMBaZWIJilPhq2up22mN_RAKQI-qj2Jvg">Downloadable build</a></p>
+                <p><strong>More Info: </strong><a href="http://www.thegoty.com/glasses-simulator">Webpage for Glasses Simulator</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="seven">
+    <div class="container seven">
+        <div class="row">
+                        <div class="col-xs-12 top-small-spacer bottom-xsmall-spacer" align="center">
+                <p>This tutorial was made by Bronson Zgeb and G.P. Lackey of <strong><a class="seven" href="http://www.ko-opmode.com">KO-OP</a></strong></p>
+                <a href="https://twitter.com/bzgeb" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @bzgeb</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+<a href="https://twitter.com/mousefountain" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @Mousefountain</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<!-- closing body and html -->
+   
+<!-- Google Analytics -->
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-30393443-1']);
+    _gaq.push(['_setDomainName', 'ko-opmode.com']);
+    _gaq.push(['_trackPageview']);
+    
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    </script>
+  </body>
+</html>
